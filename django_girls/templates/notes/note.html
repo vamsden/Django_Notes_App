@@ -1,0 +1,15 @@
+{% extends 'notes/base.html' %}
+{% load staticfiles %}
+
+    {% block notes %}
+    {% for item in note %}
+        <div class="col-sm-6 col-md-3 clearfix">
+            <div class="col-sm-12 post-body draggable">
+                <img class="pin" src="{% static 'notes/img/pin.png' %}">
+                <span class="glyphicon glyphicon-remove"></span>
+                <h2 class="text-center">{{ item.title }}</h2><hr>
+                <p class="lead">{{ item.text|linebreaks }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    {% endblock %}

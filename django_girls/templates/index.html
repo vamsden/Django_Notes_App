@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Django | App Station</title>
+
+    <!-- Bootstrap -->  
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
+
+    <link rel="stylesheet" href="{% static 'notes/css/custom.css' %}">
+
+  </head>
+
+  <body>
+    
+    <div class="container-fluid">
+        <div class="row blog-title">
+            <h1 class="text-center"><a href="{% url 'index' %}">App Station</a></h1>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        
+        <div class="row separator"></div>
+        <div class="container">
+            <div class="row">
+                <a href="{% url 'notes' %}">
+                <div class="col-md-6">
+                    <div class="col-md-12 app1">
+                        <h1 class="text-center">Notes App</h1><hr>
+                        <img class="img-responsive" src="{% static 'notes/img/note.png' %}">
+                    </div>
+                </div>
+                </a>
+                
+                <a href="{% url 'post_list' %}">
+                <div class="col-md-6">
+                    <div class="col-md-12 app2">
+                        <h1 class="text-center">Blog</h1><hr>
+                        <img class="img-responsive" src="{% static 'notes/img/bird.png' %}">
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        
+
+    </div>    
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+    <!--<script>
+    $(document).ready(function() {
+        $(".draggable").draggable({scroll: true});
+    });
+    </script>-->
+  
+    </body>
+</html>
