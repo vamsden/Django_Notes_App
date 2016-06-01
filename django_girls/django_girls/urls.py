@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^$', 'notes.views.index', name='index'),
     url(r'^blog/', include('blog.urls')),
     url(r'^notes/', include('notes.urls')),
+    url(r'^math_app/', include('math_app.urls')),
 ]

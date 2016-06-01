@@ -1,0 +1,8 @@
+<form method="post" action="">
+	{% csrf_token %}
+    Add two numbers {{ add_form.a }} + {{ add_form.b }}
+    <input type="submit" value="equals" />
+	{% if t != '' %}
+		{{ t }}
+	{% endif %}
+</form>

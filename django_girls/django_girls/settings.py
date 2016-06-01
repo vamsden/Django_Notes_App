@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'crispy_forms',
     'blog',
     'notes',
+    'math_app',
 )
 
 MIDDLEWARE_CLASSES = (
