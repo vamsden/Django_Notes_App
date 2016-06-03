@@ -14,10 +14,7 @@ def index(request):
             return present_output(form)
     else:
         form = InputForm()
-
     return render(request, 'math_app/index.html', {'form': form})
-
-
 def present_output(form):
     r = form.r
     s = compute(r)
