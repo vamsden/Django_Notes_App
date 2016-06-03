@@ -1,7 +1,11 @@
+import json
+import socket
+
 from django.shortcuts import render
-# from django.http import HttpResponse
+from django.http import HttpResponse
 from models import InputForm, AdditionForm
 from compute import compute, addition
+
 
 # Create your views here.
 
@@ -56,3 +60,19 @@ def add(request):
     }
 
     return render(request, 'math_app/add.html', context)
+
+
+def main(request):
+    return render(request, 'math_app/ajax.html', context={})
+
+
+def ajaxexample(request):
+    if request.POST.has_key('client_response'):
+        x = request.POST['client_response']
+        y = socket.gethostbyname(x)
+        response_dict = {}
+        response_dict.update({'server_response': y})
+        return HttpResponse(json.dumps(response_dict),
+                            content_type='application/javascript')
+    else:
+        return render(request, 'math_app/ajax.html', context={})
